@@ -13,7 +13,7 @@
       read -p 'Enter Gateway IP Address: ' gatway
       echo "we are about setup static ip for vm ....."
       sleep 10
-      hostnamectl1 set-hostname $VM_hostname
+      hostnamectl set-hostname $VM_hostname
       cp /etc/hosts /etc/hosts.bak
       echo "$VM_staticip $VM_hostname" >> /etc/hosts
       rm -f /etc/sysconfig/network-scripts/ifcfg-enp0s3.bak
